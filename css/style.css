@@ -1,0 +1,137 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap");
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: 0.2s linear;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+html::-webkit-scrollbar {
+  width: 1rem;
+}
+html::-webkit-scrollbar-track {
+  background: #fff;
+}
+html::-webkit-scrollbar-thumb {
+  background: #244d4d;
+}
+
+.header {
+  padding: 2rem 9%;
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background: #f6fbf6;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header .logo {
+  font-size: 2.5rem;
+  color: #244d4d;
+  font-weight: bolder;
+}
+.header .logo i {
+  padding-right: 0.3rem;
+}
+.header .search-form {
+  height: 5rem;
+  width: 50rem;
+  border-radius: 5rem;
+  background: #fff;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  border: 0.1rem solid #244d4d;
+}
+.header .search-form input {
+  height: 100%;
+  width: 100%;
+  padding: 0 1.2rem;
+  font-size: 1.6rem;
+  color: #244d4d;
+  text-transform: none;
+}
+.header .search-form label {
+  font-size: 2.2rem;
+  padding-right: 1.7rem;
+  cursor: pointer;
+  color: #244d4d;
+}
+.header .search-form label:hover {
+  color: #779;
+}
+.header .icons div {
+  margin-left: 2rem;
+  font-size: 2.5rem;
+  cursor: pointer;
+  color: #244d4d;
+}
+.header .icons div:hover {
+  color: #779;
+}
+
+#search-btn {
+  display: none;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(360deg);
+    opacity: 0;
+  }
+}
+#closer {
+  position: fixed;
+  top: 1.5rem;
+  right: 2rem;
+  font-size: 5rem;
+  cursor: pointer;
+  z-index: 10000;
+  color: #244d4d;
+  animation: rotate 0.4s linear 0.4s backwards;
+  display: none;
+}
+#closer:hover {
+  color: #779;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  right: -101%;
+  z-index: 1000;
+  width: 35rem;
+  height: 100vh;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column;
+}
+.navbar.active {
+  right: 0;
+  box-shadow: 0 0 0 100vw rgba(0, 0, 0, 0.5);
+  transition: 0.4s linear;
+}
+.navbar a {
+  margin: 1rem 0;
+  font-size: 2.5rem;
+  color: #244d4d;
+}
+.navbar a:hover {
+  color: #779;
+}
+
+/*# sourceMappingURL=style.css.map */

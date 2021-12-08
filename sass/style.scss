@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
+
+*{
+  font-family: 'Poppins', sans-serif;
+  margin:0; padding:0;
+  box-sizing: border-box;
+  outline: none; border:none;
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: .2s linear;
+}
+
+$green:#244d4d;
+$white:#fff;
+$light-color:#779;
+$light-bg:#f6fbf6;
+$border:.1rem solid $green;
+$box-shadow:0 .5rem 1rem rgba(0,0,0,.1);
+$dark-shadow:0 0 0 100vw rgba(0,0,0,.5);
+
+html{
+  font-size: 62.5%;
+  overflow-x: hidden;
+  
+
+  &::-webkit-scrollbar{
+    width:1rem;
+  }
+
+  &::-webkit-scrollbar-track{
+    background: $white;
+  }
+
+  &::-webkit-scrollbar-thumb{
+    background: $green;
+  }
+}
+
+.header{
+  padding:2rem 9%;
+  position: sticky;
+  top:0; left:0; right:0;
+  z-index: 100;
+  background: $light-bg;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .logo{
+    font-size: 2.5rem;
+    color:$green;
+    font-weight: bolder;
+
+    i{
+      padding-right: .3rem;
+    }
+  }
+  
+  .search-form{
+    height: 5rem;
+    width:50rem;
+    border-radius: 5rem;
+    background: $white;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    border:$border;
+
+    input{
+      height:100%;
+      width:100%;
+      padding:0 1.2rem;
+      font-size: 1.6rem;
+      color:$green;
+      text-transform: none;
+    }
+
+    label{
+      font-size: 2.2rem;
+      padding-right: 1.7rem;
+      cursor: pointer;
+      color:$green;
+
+      &:hover{
+        color:$light-color;
+      }
+    }
+  }
+  .icons div{
+    margin-left: 2rem;
+    font-size: 2.5rem;
+    cursor: pointer;
+    color:$green;
+
+    &:hover{
+      color:$light-color;
+    }
+  }
+}
+
+#search-btn{
+  display: none;
+}
+
+@keyframes rotate{
+  0%{
+    transform: rotate(360deg);
+    opacity: 0;
+  }
+}
+
+#closer{
+  position: fixed;
+  top:1.5rem; right:2rem;
+  font-size: 5rem;
+  cursor: pointer;
+  z-index: 10000;
+  color:$green;
+  animation: rotate .4s linear .4s backwards;
+  display: none;
+
+  &:hover{
+    color:$light-color;
+  }
+}
+
+.navbar{
+  position: fixed;
+  top:0; right:-101%;
+  z-index: 1000;
+  width:35rem;
+  height: 100vh;
+  background: $white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column;
+
+  &.active{
+    right:0;
+    box-shadow: $dark-shadow;
+    transition: .4s linear;
+  }
+
+  a{
+    margin:1rem 0;
+    font-size: 2.5rem;
+    color:$green;
+
+    &:hover{
+      color:$light-color;
+    }
+  }
+}
