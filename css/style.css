@@ -12,7 +12,7 @@
 }
 
 html {
-  font-size: 58.5%;
+  font-size: 61.5%;
   overflow-x: hidden;
 }
 html::-webkit-scrollbar {
@@ -518,6 +518,118 @@ section {
 }
 .products .box-container .box .content .stars span {
   color: #96a4a5;
+}
+
+.about {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+.about .image {
+  flex: 1 1 40rem;
+}
+.about .image img {
+  width: 100%;
+}
+.about .content {
+  flex: 1 1 40rem;
+}
+.about .content span {
+  font-size: 2rem;
+  color: #96a4a5;
+}
+.about .content h3 {
+  font-size: 2.5rem;
+  color: #07a1a1;
+  padding-top: 1rem;
+}
+.about .content p {
+  font-size: 1.4rem;
+  color: #96a4a5;
+  padding: 1rem 0;
+  line-height: 2;
+}
+
+.services .box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  gap: 1.5rem;
+}
+.services .box-container .box {
+  padding: 2rem;
+  text-align: center;
+  border: 0.1rem solid #07a1a1;
+}
+.services .box-container .box img {
+  height: 8rem;
+  margin-bottom: 1rem;
+}
+.services .box-container .box h3 {
+  font-size: 2.2rem;
+  color: #07a1a1;
+}
+.services .box-container .box p {
+  font-size: 1.4rem;
+  color: #96a4a5;
+  line-height: 2;
+  padding: 1rem 0;
+}
+
+.blog .box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  gap: 1.5rem;
+}
+.blog .box-container .box {
+  border: 0.1rem solid #07a1a1;
+  background: #f6fbf6;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
+.blog .box-container .box:hover .image img {
+  transform: scale(1.2);
+}
+.blog .box-container .box .image {
+  height: 25rem;
+  width: 100%;
+  overflow: hidden;
+}
+.blog .box-container .box .image img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.blog .box-container .box .content {
+  padding: 1.5rem 2rem;
+}
+.blog .box-container .box .content h3 {
+  font-size: 2rem;
+  color: #07a1a1;
+}
+.blog .box-container .box .content p {
+  font-size: 1.4rem;
+  color: #96a4a5;
+  line-height: 2;
+  padding: 1rem 0;
+}
+.blog .box-container .box .content .icons {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 0.1rem solid #07a1a1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.blog .box-container .box .content .icons a {
+  font-size: 1.4rem;
+  color: #96a4a5;
+}
+.blog .box-container .box .content .icons a:hover {
+  color: #07a1a1;
+}
+.blog .box-container .box .content .icons a i {
+  padding-right: 0.5rem;
+  color: #07a1a1;
 }
 
 .footer {

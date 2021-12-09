@@ -25,7 +25,7 @@ $dark-shadow:0 0 0 100vw rgba(0,0,0,.5);
 }
 
 html{
-  font-size: 58.5%;
+  font-size: 61.5%;
   overflow-x: hidden;
   
 
@@ -610,6 +610,137 @@ section{
     }
   }
 }
+
+.about{
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap:2rem;
+
+  .image{
+    flex:1 1 40rem;
+
+    img{
+      width:100%;
+    }
+  }
+
+  .content{
+    flex:1 1 40rem;
+
+    span{
+      font-size: 2rem;
+      color:$light-color;
+    }
+
+    h3{
+      font-size: 2.5rem;
+      color:$green;
+      padding-top: 1rem;
+    }
+
+    p{
+      font-size: 1.4rem;
+      color:$light-color;
+      padding: 1rem 0;
+      line-height: 2;
+    }
+  }
+}
+
+.services .box-container{
+  @include grid(30rem);
+
+  .box{
+    padding:2rem;
+    text-align: center;
+    border:$border;
+
+    img{
+      height: 8rem;
+      margin-bottom: 1rem;
+    }
+
+    h3{
+      font-size: 2.2rem;
+      color:$green;
+    }
+
+    p{
+      font-size: 1.4rem;
+      color:$light-color;
+      line-height: 2;
+      padding:1rem 0;
+    }
+  }
+}
+
+
+.blog .box-container{
+  @include grid(30rem);
+
+  .box{
+    border:$border;
+    background: $light-bg;
+    box-shadow: $box-shadow;
+
+    &:hover .image img{
+      transform: scale(1.2);
+    }
+
+    .image{
+      height: 25rem;
+      width:100%;
+      overflow: hidden;
+
+      img{
+        height: 100%;
+        width:100%;
+        object-fit: cover;
+      }
+    }
+
+    .content{
+      padding:1.5rem 2rem;
+
+      h3{
+        font-size: 2rem;
+        color:$green;
+      }
+
+      p{
+        font-size: 1.4rem;
+        color:$light-color;
+        line-height: 2;
+        padding:1rem 0;
+      }
+
+      .icons{
+        margin-top: 2rem;
+        padding-top: 1.5rem;
+        border-top: $border;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        a{
+          font-size: 1.4rem;
+          color:$light-color;
+
+          &:hover{
+            color:$green;
+          }
+
+          i{
+            padding-right: .5rem;
+            color:$green;
+          }
+        }
+      }
+    }
+  }
+}
+
 
 
 
