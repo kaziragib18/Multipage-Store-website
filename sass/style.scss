@@ -490,6 +490,127 @@ section{
 }
 
 
+.category .box-container{
+  @include grid(16rem);
+
+  .box{
+    padding:2rem;
+    border:$border;
+    text-align: center;
+
+    &:hover{
+      background: $green;
+
+      img{
+        filter: invert(1);
+      }
+
+      h3{
+        color:$white;
+      }
+    }
+
+    img{
+      height: 6rem;
+      margin-bottom: 1rem;
+    }
+
+    h3{
+      font-size: 1.7rem;
+      color:$green;
+    }
+  }
+}
+
+.products .box-container{
+  @include grid(26rem);
+
+  .box{
+    position: relative;
+    background: #f2f2f2;
+    overflow: hidden;
+
+    &:hover{
+
+      .image img{
+        transform: scale(1.2);
+      }
+
+      .icons{
+        top:0;
+      }
+    }
+
+    .icons{
+      position: absolute;
+      top:-100%; left:0;
+      height: 30rem;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap:.5rem;
+      background: rgba(242,242,242, .7);
+      z-index: 10;
+
+      a{
+        text-align: center;
+        height: 5rem;
+        line-height: 5rem;
+        width: 5rem;
+        background:$white;
+        color:$green;
+        font-size: 1.5rem;
+        box-shadow: $box-shadow;
+
+        &:hover{
+          background: $green;
+          color:$white;
+        }
+      }
+    }
+
+    .image{
+      height: 30rem;
+      width: 100%;
+      overflow: hidden;
+
+      img{
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+
+    .content{
+      padding:1.5rem 2rem;
+
+      .price{
+        font-size: 1.7rem;
+        color:$light-color;
+      }
+
+      h3{
+        font-size: 2rem;
+        color:$green;
+        padding:.5rem 0;
+      }
+
+      .stars{
+        font-size: 1.7rem;
+        
+        i{
+          color:gold;
+        }
+
+        span{
+          color:$light-color;
+        }
+      }
+    }
+  }
+}
+
 
 
 .footer{
